@@ -1,0 +1,13 @@
+server:
+  port: 8082
+
+# 后续可以将此项目注册到服务中心，配置信息配到配置中心，地址可以通过网关再路由到本项目
+prop:
+  upload-folder: /home/mystatic/image/ # 文件存储路径,存储文件在主机真实的路径；
+  img-folder: /myImage/getImage/ # 访问地址 http://localhost:8082/myImage/getImage/***.jpg
+
+#设置最大上传大小为10Mb
+spring:
+  http:
+    multipart:
+      max-file-size: 10Mb
